@@ -1,0 +1,624 @@
+:root{
+    --brand-color: rgba(15, 98, 146, 1);
+    --secondary-color: rgba(86, 43, 8, 1);
+    --black-color: black;
+    --white-color: white;
+    --primary-font: 'Courier New', Courier, monospace;
+    --secondary-font: "Calibri" ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.landingPage__container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.background--overlay{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color:rgba(15, 98, 146, 0.6);;
+}
+#background__img{
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -100;
+}
+/* Contents */
+.landingPage__content{
+    background-color: rgba(255, 255, 255, 0.8);;
+    margin: auto;
+    width: 70%;
+    max-width: 80%;
+    border-radius: 30px;
+    position: absolute;
+    top: 70px;
+    bottom: 70px;
+    left: 60px;
+    right: 60px;
+    padding: 30px 75px 30px 75px;
+    z-index: 100 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.landingPage__navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.group--logo{
+    width: 150px;
+    height: 40px;
+}
+.UNILAK--logo{
+    width: 50px;
+    height: 50px;
+}
+.landingPage__header{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.landingPage__header>h1{
+    font-family: var(--primary-font);
+    font-size: 50px;
+    color: var(--brand-color);
+}
+.stack--italic{
+    font-family: 'Calibri';
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.landingPage__team{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+.landingPage__team--title>h2{
+    font-family: "Calibri";
+    font-size: 22px;
+}
+.landingPage__team--images{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+#teamImage{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.getstarted--btn{
+    width: 200px;
+    padding: 10px;
+    transition-duration: 0.4s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-out;
+    font-family: var(--secondary-font);
+    background-color: var(--black-color);
+    font-weight: 500;
+    color: var(--white-color);
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+
+}
+.getstarted--btn:hover,.login__exit--button:hover,.login__create--button:hover,.signup__login--button:hover{
+    border: 1px solid var(--brand-color);
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+.link{
+    text-decoration: none;
+
+}
+
+/* Responsiveness */
+@media all and (max-width: 1000px){
+    .landingPage__content{
+        left: 10px;
+        right: 10px;
+        width: 90%;
+        padding: 30px 35px 30px 35px;  
+        max-width: 95%;
+    }
+    .landingPage__header>h1{
+        font-size: 35px;
+    }
+    .stack--italic {
+        font-weight: 400;
+        font-size: 35px;
+    }
+    #teamImage {
+        width: 80px;
+        height: 80px;
+    }
+    .getstarted--btn {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 500px){
+    .landingPage__content{
+        width: 90%;
+        padding: 20px 20px 20px 20px;  
+    }
+    .getstarted--btn {     
+        width: 150px;
+    }
+    .group--logo {
+        width: 100px;
+        height: 25px;
+    }
+    .UNILAK--logo {
+        width: 35px;
+        height: 35px;
+    }
+    .stack--italic {
+        font-weight: 300;
+        font-size: 25px;
+    }
+    .landingPage__header>h1 {
+        font-size: 30px;
+    }
+    #teamImage {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media all and (max-width: 320px){
+    .landingPage__team {
+        gap: 4px;
+    }
+    .landingPage__header>h1 {
+        font-size: 25px;
+    }
+    .landingPage__header {
+         margin-top: 0px;
+    }
+    .getstarted--btn {
+        padding: 6px;
+        font-size: 16px;
+        width: 140px;
+    }
+    .landingPage__team--title>h2 {
+        font-size: 18px;
+    }
+}
+
+/* Login Styles & Signup Styles */
+.login__form--container,.signup__form--container{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 20px !important;
+    align-items: center;
+    display: flex;
+}
+.login__navbar,.signup__navbar{
+    width: 100%;
+    padding: 10px 50px 10px 50px;
+    cursor: pointer;
+    top: 0px;
+    position: fixed;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--white-color);
+}
+.login__form--content,.signup__form--content{
+    background-color: var(--brand-color);
+    flex-direction: column;
+    width: 500px;
+    max-width: 70%;
+    padding: 60px;
+    gap: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+    position: absolute;
+    top: 180px;
+}
+.login__form,.signup__form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.form__title{
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+.login__username,.login__reg,.signup__username,.signup__email,.signup__reg{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+.username--input,.reg--input,.email--input,.signup__username--input,.reg--input{
+    padding: 10px;
+    font-family: var(--secondary-font);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+#login__username--error,#login__reg--error,#login__username--error,#signup__username--error,#login__reg--error{
+    color: var(--white-color);
+}
+.login__btn,.signup__btn{
+    width: 100%;
+    padding: 8px;
+    transition: 0.2s 0.1s ease-out;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+}
+.login__btn:hover, .signup__btn:hover{
+    background-color: var(--brand-color);
+    border: 1px solid var(--secondary-color);
+}
+.other__options--button,.signup__option--button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+.login__exit--button,.login__create--button,.signup__login--button{
+    padding: 8px;
+    transition-duration: 0.2s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-out;
+    background-color: var(--black-color);
+    font-family: var(--secondary-font);
+    color: var(--white-color);
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    width: 100px;
+    outline: none;
+}
+.login__create--button{
+    width: 200px;
+}
+
+
+/* Responsiveness */
+@media all and (max-width: 567px){
+    .login__form--content,.signup__form--content {
+        top: 130px;
+        padding: 20px;
+    }
+    .login__exit--button,.signup__login--button, .login__create--button {
+        width: 100%;
+        font-size: 18px;
+    }
+    .login__btn,.signup__btn {
+        font-size: 18px;
+    }
+    .form__title {
+        font-size: 25px;
+    }
+    .login__navbar,.signup__navbar {
+        padding: 10px 30px 10px 30px;
+    }
+}
+
+.signup__option--button{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+.signup__option--button>p{
+    font-size: 18px;
+    font-family: var(--secondary-font);
+    color: var(--white-color);
+}
+.signup__login--button{
+    width: 100%;
+    padding: 8px;
+    font-size: 20px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.signup--link{
+    width: 100%;
+}
+
+/* Responsiveness */
+@media all and (max-width: 567px){
+    .signup__login--button{
+        font-size: 18px;
+    }
+    .signup__option--button>p{
+        font-size: 16px;
+    }
+}
+
+/* Stack and Queue Styles */
+.stack-queue__container{
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+}
+.stack-queue__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.stack--head,.queue--head{
+    font-family: var(--primary-font);
+    color: var(--brand-color);
+    font-size: 35px;
+}
+
+/* Stack Queue styles */
+.stack-queue__content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 20px;
+}
+.stack__container,.queue__container{
+    width: 45.5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+.stack__content,.queue__content{
+    width: 100%;
+    display: flex;
+    padding: 35px;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid var(--black-color);
+}
+.addItems__form,.addItems,.deleteItems__form,.deleteItems,.displayItems__form,.displayItems,.sort--form,.sortItems{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addItems,.deleteItems,.displayItems,.sortItems{
+    flex-direction: row;
+}
+label{
+    font-family: var(--secondary-font);
+    font-size: 25px;
+    width: 30%;
+
+}
+#addItems__input,#deleteItems__input,#display--tiems,#sort--items{
+    padding: 8px;
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    outline: none;
+    width: 75%;
+}
+.addItems__btn--container{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.addItems--btn,.deletetems--btn{
+    padding: 6px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s 0.1s ease-in;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+    font-size: 20px;
+    width: 60px;
+    font-weight: 400;
+}
+.addItems--btn:hover,.deletetems--btn:hover{
+    background-color: var(--brand-color);
+    border-radius: 5px;
+}
+.displayItems__form,.sort--form{
+    align-items: center;
+}
+.displayItems--title{
+    font-size: 25px;
+    font-family: var(--secondary-font);
+    margin-bottom: 15px;
+}
+.displayItems,.sortItems{
+    align-items: start;
+}
+#display--tiems,#sort--items{
+    width: 86%;
+}
+.displaytems--btn{
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s 0.1s ease-in;
+    width: 150px;
+    background-color: var(--brand-color);
+    font-size: 20px;
+    color: var(--white-color);
+    border: none;
+    outline: none;
+}
+.displaytems--btn:hover{
+    background-color: var(--white-color);
+    border-radius: 8px;
+    border: 1px solid var(--brand-color);
+    color: var(--black-color);
+}
+#sortItems__input{
+    width: 120px;
+    padding: 5px;
+    font-size: 18px;
+    font-family: var(--secondary-font);
+    outline: none;
+}
+.stack-queue__btn--container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.logout--btn{
+    width: 250px;
+    padding: 10px;
+    transition: 0.3s 0.1s ease-in-out;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    transform: translateY(0);
+    border: none;
+    outline: none;
+    font-family: var(--secondary-font);
+    font-size: 22px;
+    color: var(--white-color);
+    cursor: pointer;
+}
+.logout--btn:hover{
+    transform: translateY(-5px);
+}
+
+@media all and (max-width: 1000px){
+    .stack-queue__content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .stack__container, .queue__container{
+        width: 87%;
+    }
+}
+@media all and (max-width: 658px){
+
+    .stack--head, .queue--head {
+        font-size: 30px;
+    }
+    label {
+        font-size: 20px;
+    }
+    #addItems__input, #deleteItems__input, #display--tiems, #sort--items {
+        padding: 6px;
+        font-size: 16px;
+        width: 75%;
+    }
+    .addItems--btn, .deletetems--btn {
+        padding: 4px;
+        font-size: 18px;
+    }
+    .displayItems--title {
+        font-size: 20px;
+    }
+    .displaytems--btn,#sortItems__input {
+        padding: 5px;
+        font-size: 18px;
+        width: 100px;
+    }
+    #addItems__input, #deleteItems__input, #display--tiems, #sort--items {
+        width: 80%;
+    }
+   
+}
+@media all and (max-width: 401px){
+    .stack-queue__container {
+        padding-top: 80px;
+    }
+    .addItems, .deleteItems {
+        flex-direction: column;
+    }
+    label {
+        font-size: 18px;
+        width: 100%;
+    }
+    #addItems__input, #deleteItems__input, #display--tiems, #sort--items {
+        width: 100%;
+    }
+    .stack--head, .queue--head {
+        font-size: 20px;
+    }
+    .displayItems--title {
+        font-size: 18px;
+    }
+    .displaytems--btn, #sortItems__input {
+        font-size: 14px;
+        width: 80px;
+    }
+    .addItems--btn, .deletetems--btn {
+        padding: 2px;
+        font-size: 16px;
+    }
+    .logout--btn {
+        padding: 8px;
+        font-size: 18px;
+    }
+    .stack__content, .queue__content {
+        padding: 25px;
+    }
+}

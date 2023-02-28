@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+    <div class="login__form--container">
+        <nav class="login__navbar">
+            <img  src="../assets/Logo.png" alt="" class="group--logo">
+            <img src="../assets/image 2.png" class="UNILAK--logo" alt="">
+        </nav>
+        <div class="login__form--content">
+        <form action="" class="login__form" id="myForm" onsubmit="return validateForm() " >
+            <span class="form__title">Manage Your Stack and Queue</span>
+            <div class="login__username">
+                <input id="username" class="username--input" type="text" placeholder="username">
+                <p id="login__username--error" class="error"></p>
+            </div>
+            <div class="login__reg">
+                <input id="password" class="reg--input"  type="password" placeholder="reg#">
+                <p id="login__reg--error" class="error"></p>
+            </div>
+            <button class="login__btn">Login</button>
+        </form>
+        <div class="other__options--button">
+            <a href="./stack-queue-mis.html" class="link">
+            <button class="login__exit--button">Exit</button></a>
+            <a href="./signup-form.html" class="link">
+            <button class="login__create--button">Create Account</button></a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+    <script src="../script.js"></script>
+    

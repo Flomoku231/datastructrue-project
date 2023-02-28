@@ -11,10 +11,19 @@
 <body>
     <div class="signup__form--container">
         <nav class="signup__navbar">
-            <img  src="../assets/Logo.png" alt="" class="group--logo">
+            <img  onclick="showPopup()" src="../assets/Logo.png" alt="" class="group--logo">
             <img src="../assets/image 2.png" class="UNILAK--logo" alt="">
         </nav>
-        <div class="signup__form--content">
+        <!-- signup popup -->
+        <div class="popup--container">
+            <div class="popup--content">
+                    <p id="popup--text">Thanks for registering your account</p>
+                
+                    <button class="redirect--btn" onclick="hidePopup()">Ok</button>
+        </div>
+        </div>
+        <!--  -->
+        <div class="signup__form--content" >
         <form action="" class="signup__form">
             <span class="form__title">Signup & Get Started</span>
             <div class="signup__username">
@@ -30,10 +39,10 @@
                 <p id="signup__reg--error">invalid user name</p>
             </div>
 
-            <button class="signup__btn">Submit</button>
+            <button  class="signup__btn">Submit</button>
           </form>
         <div class="signup__option--button">
-            <p>Already have an account?</p>
+            <p >Already have an account?</p>
             <a href="./login-form.html" class="signup--link">
             <button class="signup__login--button">Login</button></a>
         </div>
